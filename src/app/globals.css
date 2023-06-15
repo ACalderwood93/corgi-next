@@ -39,3 +39,7 @@ h3 {
   font-weight: 500;
   margin-bottom: 1rem;
 }
+
+.primary-button {
+  background: linear-gradient(rgb(250, 155, 63) 0%, rgb(238, 111, 46));
+}
