@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
+  --foreground-rgb: 48, 48, 48;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
@@ -17,6 +17,7 @@
 }
 
 body {
+  font-family: 'Roboto, sans-serif';
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -29,5 +30,12 @@ body {
 h1 {
   font-size: 2rem;
   font-weight: 700;
+  margin-bottom: 1rem;
+  
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
   margin-bottom: 1rem;
 }
