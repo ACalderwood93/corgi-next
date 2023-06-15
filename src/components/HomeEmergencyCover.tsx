@@ -1,7 +1,5 @@
 "use client";
 import Image from "next/image";
-import { Button } from "react-bootstrap";
-import Cta from "./Cta";
 import Link from "next/link";
 
 const HomeEmergencyCover = () => {
