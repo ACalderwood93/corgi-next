@@ -29,7 +29,7 @@ const HomeEmergencyCover = () => {
           </ul>
 
           <Link href="/boiler-cover">
-            <button className="primary-button w-50 p-2 rounded-md text-white font-bold">
+            <button className="primary-colour w-50 p-2 rounded-md text-white font-bold">
               Get boiler cover
             </button>
           </Link>

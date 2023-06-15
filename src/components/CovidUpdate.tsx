@@ -2,7 +2,7 @@ const CovidUpdate = () => {
   return (
     <div className="bg-primary-muted py-6">
       <div className="w-[70%] p-4 mx-auto">
-        <h2>Covid-19 Update</h2>
+        <h2 className="text-xl">Covid-19 Update</h2>
         <p>
           We know that this is a really tough time for so many of us. If
           you&apos;re struggling to pay for CORGI HomePlan, please call us on

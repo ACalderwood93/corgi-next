@@ -27,7 +27,7 @@ export default function RootLayout({
       <body className={poppins.className}>
         <nav>navbar</nav>
         <main className="flex">{children}</main>
-        <footer>footer</footer>
+        <footer className="mt-6">footer</footer>
       </body>
     </html>
   );
