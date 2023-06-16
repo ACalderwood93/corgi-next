@@ -21,7 +21,7 @@ const HomeEmergencyCover = () => {
           </p>
 
           <h2 className="text-xl font-bold my-2">Key benifits</h2>
-          <ul className="mb-4">
+          <ul className="mb-4 list-image-none">
             <li>Annual Boiler Service</li>
             <li>24/7 emergency helpline</li>
             <li>Parts and labour included</li>
@@ -34,7 +34,7 @@ const HomeEmergencyCover = () => {
             </button>
           </Link>
         </div>
-        <div className="p-2 rounded-lg md:w-2/4 sm:w-full">
+        <div className="p-2 rounded-lg md:w-2/4 sm:w-full h-full">
           <Image
             className="aspect-auto"
             src="/home-emergency-cover.jpg"
