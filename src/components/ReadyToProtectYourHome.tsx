@@ -13,12 +13,6 @@ const ReadyToProtectYourHome = () => {
         <div className="flex flex-row flex-wrap mx-auto w-[80%]">
           <div className="md:w-1/3 sm:w-full ">
             <Card className="p-6 mx-1  text-center gap-2.5">
-              <Image
-                src="/protect-home-icon1.png"
-                alt="corgiShield"
-                width={82}
-                height={82}
-              />
               <span className="text-sm">Home Emergency Cover</span>
               <p>
                 You deserve better boiler cover for less. Join CORGI HomePlan,
@@ -29,12 +23,6 @@ const ReadyToProtectYourHome = () => {
           </div>
           <div className="md:w-1/3 sm:w-full ">
             <Card className="p-6 mx-1 text-center gap-2.5">
-              <Image
-                src="/protect-home-icon1.png"
-                alt="corgiShield"
-                width={82}
-                height={82}
-              />
               <span className="text-sm">Home Emergency Cover</span>
               <p>
                 You deserve better boiler cover for less. Join CORGI HomePlan,
@@ -45,12 +33,6 @@ const ReadyToProtectYourHome = () => {
           </div>
           <div className="md:w-1/3 sm:w-full">
             <Card className="p-6 mx-1  text-center gap-2.5">
-              <Image
-                src="/protect-home-icon1.png"
-                alt="corgiShield"
-                width={82}
-                height={82}
-              />
               <span className="text-sm">Home Emergency Cover</span>
               <p>
                 You deserve better boiler cover for less. Join CORGI HomePlan,
