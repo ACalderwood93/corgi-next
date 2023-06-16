@@ -1,6 +1,5 @@
-import "./globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./overrides.css";
+import "./globals.css";
 
 import { Roboto, Poppins } from "next/font/google";
 const roboto = Roboto({
@@ -26,7 +25,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={poppins.className}>
         <nav>navbar</nav>
-        <main className="flex">{children}</main>
+        <main className="flex w-screen justify-center">{children}</main>
         <footer className="mt-6">footer</footer>
       </body>
     </html>
