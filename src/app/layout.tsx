@@ -2,6 +2,7 @@ import "./globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import { Roboto, Poppins } from "next/font/google";
+import Navbar from "@/components/NavBar";
 const roboto = Roboto({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
@@ -24,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <nav>nav</nav>
+        <Navbar />
         <main className="flex w-screen justify-center">{children}</main>
         <footer>footer</footer>
       </body>

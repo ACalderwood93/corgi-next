@@ -11,7 +11,7 @@ const hero = () => {
   return (
     <section>
       <div
-        className={`bg-cover bg-no-repeat bg-[url('/hero.png')] text-center w-screen p-16 ${roboto.className}`}
+        className={`flex flex-col justify-center items-center bg-cover bg-no-repeat bg-[url('/hero.png')] text-center w-screen p-16 ${roboto.className} min-h-[500px]`}
       >
         <h1>BOILER AND HOME EMERGENCY COVER</h1>
         <h1 className="text-white">FROM THE UK&apos;s TOP RATED PROVIDER</h1>
