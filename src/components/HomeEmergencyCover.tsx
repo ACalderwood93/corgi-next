@@ -35,6 +35,7 @@ const HomeEmergencyCover = () => {
         </div>
         <div className="rounded-lg w-full md:w-2/4 p-2 h-full">
           <Image
+            priority
             className="aspect-auto"
             src="/home-emergency-cover.jpg"
             width={500}
