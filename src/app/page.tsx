@@ -8,9 +8,9 @@ export default function Home() {
   return (
     <section>
       <Hero />
-      <CovidUpdate />
+      {/* <CovidUpdate />
       <HomeEmergencyCover />
-      <ReadyToProtectYourHome />
+      <ReadyToProtectYourHome /> */}
     </section>
   );
 }

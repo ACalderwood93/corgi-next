@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const HomeEmergencyCover = () => {
   return (
-    <section className="w-[70%] mx-auto h-[500px] pt-6 pm-6">
+    <section className="flex justify-center h-[500px] pt-6 pm-6">
       <div className="flex-row flex h-full flex-wrap">
         <div className="md:w-2/4 sm:w-full px-2">
           <span className="font-bold">Home Emergency cover</span>
