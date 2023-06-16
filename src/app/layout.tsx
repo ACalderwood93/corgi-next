@@ -24,7 +24,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
+        <nav>nav</nav>
         <main className="flex w-screen justify-center">{children}</main>
+        <footer>footer</footer>
       </body>
     </html>
   );
