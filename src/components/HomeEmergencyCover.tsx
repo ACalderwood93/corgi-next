@@ -4,11 +4,11 @@ import Link from "next/link";
 
 const HomeEmergencyCover = () => {
   return (
-    <section className="flex justify-center h-[500px] pt-6 pm-6">
-      <div className="flex-row flex h-full flex-wrap">
-        <div className="md:w-2/4 sm:w-full px-2">
+    <div className="py-6 flex justify-center">
+      <div className="flex justify-center flex-row flex-wrap w-[70%]">
+        <div className="md:w-2/4 sm:w-full p-2">
           <span className="font-bold">Home Emergency cover</span>
-          <h2 className="text-xl font-bold">
+          <h2 className="text-xl font-bold mb-2">
             Simple Plans to keep your mind at ease
           </h2>
 
@@ -20,8 +20,8 @@ const HomeEmergencyCover = () => {
             provider on Trustpilot
           </p>
 
-          <h2 className="text-xl font-bold">Key benifits</h2>
-          <ul>
+          <h2 className="text-xl font-bold my-2">Key benifits</h2>
+          <ul className="mb-4">
             <li>Annual Boiler Service</li>
             <li>24/7 emergency helpline</li>
             <li>Parts and labour included</li>
@@ -29,14 +29,14 @@ const HomeEmergencyCover = () => {
           </ul>
 
           <Link href="/boiler-cover">
-            <button className="primary-colour w-50 p-2 rounded-md text-white font-bold">
+            <button className="primary-colour p-2 rounded-md text-white font-bold">
               Get boiler cover
             </button>
           </Link>
         </div>
-        <div className="px-2 rounded-lg md:w-2/4 sm:w-full">
+        <div className="p-2 rounded-lg md:w-2/4 sm:w-full">
           <Image
-            className=""
+            className="aspect-auto"
             src="/home-emergency-cover.jpg"
             width={500}
             height={500}
@@ -44,7 +44,7 @@ const HomeEmergencyCover = () => {
           />
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
