@@ -18,4 +18,8 @@ export const CoverSections: ICoverSectionParent[] = [
       "Cleaning of the boiler’s filter (if you ask us to)",
     ],
   },
+  {
+    name: CoverSection.CentralHeating,
+    sections: ["We will fix your boiler"],
+  },
 ];
