@@ -1,18 +1,21 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const NavBar = () => {
   return (
     <nav className="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto md:mx-0 md:justify-center p-4">
-        <a href="#" className="flex items-center">
-          <Image
-            src="/logo.svg"
-            className="h-12 md:h-24 mr-3"
-            alt="Flowbite Logo"
-            width={100}
-            height={100}
-          />
-        </a>
+        <div className="flex items-center">
+          <Link href="/">
+            <Image
+              src="/logo.svg"
+              className="h-12 md:h-24 mr-3"
+              alt="Flowbite Logo"
+              width={100}
+              height={100}
+            />
+          </Link>
+        </div>
         <button
           data-collapse-toggle="navbar-dropdown"
           type="button"
