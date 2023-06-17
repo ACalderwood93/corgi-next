@@ -28,22 +28,17 @@ const ProductCard = (product: IProduct) => {
         <ul className="text-left text-sm">
           {product.covered.map((section) => {
             return (
-              <li key={section} className="flex flex-row">
-                <div className="w-[95%]">
-                  {convertCamelCaseToSpaces(CoverSection[section])}{" "}
-                </div>
-                <div className="text-right w-4 text-slate-300">
-                  <button
-                    onClick={() =>
-                      setModal({
-                        modalOpen: true,
-                        selectedCoverSection: section,
-                      })
-                    }
-                  >
-                    <FontAwesomeIcon icon={faCircleInfo} />
-                  </button>
-                </div>
+              <li key={section} className="hover:text-primary">
+                <button
+                  onClick={() =>
+                    setModal({
+                      modalOpen: true,
+                      selectedCoverSection: section,
+                    })
+                  }
+                >
+                  {convertCamelCaseToSpaces(CoverSection[section])}
+                </button>
               </li>
             );
           })}
