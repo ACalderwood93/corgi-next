@@ -4,7 +4,7 @@ import ProductCard from "./ProductCard/ProductCard";
 const FindAPlan = () => {
   return (
     <BackgroundImageContainer className="py-12">
-      <div className="w-screen md:max-w-[1200px] justify-center flex flex-col text-center">
+      <div className="w-screen md:max-w-[1200px] justify-center flex flex-col text-center p-6 md:p-0">
         <h1>Find a plan that suits you</h1>
         <div className="flex flex-row flex-wrap">
           {Products.map((product) => {
