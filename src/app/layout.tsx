@@ -1,8 +1,8 @@
 import "./globals.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-
+import "flowbite";
 import { Roboto, Poppins } from "next/font/google";
 import Navbar from "@/components/NavBar";
+import Footer from "@/components/Footer";
 const roboto = Roboto({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
@@ -27,7 +27,11 @@ export default function RootLayout({
       <body className={poppins.className}>
         <Navbar />
         <main className="flex w-screen justify-center">{children}</main>
-        <footer>footer</footer>
+        <Footer />
+        <script
+          defer={true}
+          src="https://cdn.jsdelivr.net/npm/flowbite/dist/flowbite.js"
+        ></script>
       </body>
     </html>
   );

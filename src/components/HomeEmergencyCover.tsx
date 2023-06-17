@@ -6,7 +6,7 @@ import CtaButton from "./CtaButton";
 const HomeEmergencyCover = () => {
   return (
     <div className="py-6 flex justify-center">
-      <div className="flex justify-center flex-wrap w-[70%]">
+      <div className="flex justify-center flex-wrap max-w-[1200px] p-2 md:p-4">
         <div className="w-full md:w-2/4 p-2">
           <span className="font-bold">Home Emergency cover</span>
           <h2 className="text-xl font-bold mb-2">

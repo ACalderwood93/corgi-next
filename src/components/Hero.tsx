@@ -1,7 +1,6 @@
-"use client";
 import Link from "next/link";
-import Button from "react-bootstrap/Button";
 import { Roboto } from "next/font/google";
+import CtaButton from "./CtaButton";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -17,9 +16,9 @@ const hero = () => {
         <h1 className="text-white">FROM THE UK&apos;s TOP RATED PROVIDER</h1>
         <h3>Compare our boiler plans from £15 a month</h3>
         <Link href="/boiler-cover">
-          <Button variant="dark" className="w-[240px] h-[50px] mt-4">
+          <CtaButton className="w-[240px] h-[50px] mt-4">
             Get boiler cover
-          </Button>
+          </CtaButton>
         </Link>
       </div>
     </section>
