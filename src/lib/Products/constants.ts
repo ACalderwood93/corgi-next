@@ -1,4 +1,4 @@
-import { IProduct } from "./Interfaces";
+import { CoverSection, IProduct } from "./Interfaces";
 
 export const Products: IProduct[] = [
   {
@@ -7,6 +7,7 @@ export const Products: IProduct[] = [
     priceWithoutExcess: 20,
     index: 1,
     display: true,
+    covered: [CoverSection.AnnualBoilerService, CoverSection.CentralHeating],
   },
   {
     name: "Starter",
@@ -14,6 +15,12 @@ export const Products: IProduct[] = [
     priceWithoutExcess: 24,
     index: 2,
     display: true,
+    covered: [
+      CoverSection.AnnualBoilerService,
+      CoverSection.CentralHeating,
+      CoverSection.Plumbing,
+      CoverSection.Electrics,
+    ],
   },
   {
     name: "Advanced",
@@ -21,6 +28,15 @@ export const Products: IProduct[] = [
     priceWithoutExcess: 28,
     index: 3,
     display: true,
+    covered: [
+      CoverSection.AnnualBoilerService,
+      CoverSection.CentralHeating,
+      CoverSection.Plumbing,
+      CoverSection.Electrics,
+      CoverSection.GasSupplyPipe,
+      CoverSection.WaterSupplyPipe,
+      CoverSection.InternalDrains,
+    ],
   },
   {
     name: "Complete",
@@ -28,6 +44,19 @@ export const Products: IProduct[] = [
     priceWithoutExcess: 32,
     index: 4,
     display: true,
+    covered: [
+      CoverSection.AnnualBoilerService,
+      CoverSection.CentralHeating,
+      CoverSection.Plumbing,
+      CoverSection.Electrics,
+      CoverSection.GasSupplyPipe,
+      CoverSection.WaterSupplyPipe,
+      CoverSection.InternalDrains,
+      CoverSection.ExternalDrains,
+      CoverSection.BoilerReplacement,
+      CoverSection.TapsAndToilets,
+      CoverSection.PriorityEmergencyLine,
+    ],
   },
   {
     name: "Annual Boiler Service",
@@ -35,5 +64,6 @@ export const Products: IProduct[] = [
     priceWithoutExcess: 7,
     index: 5,
     display: false,
+    covered: [CoverSection.AnnualBoilerService],
   },
 ];
