@@ -3,6 +3,7 @@ import { CoverSection, IProduct } from "@/lib/Products/Interfaces";
 import Card from "../Card";
 import CtaButton from "../CtaButton";
 import Link from "next/link";
+import { convertCamelCaseToSpaces } from "@/lib/helpers";
 
 const ProductCard = (product: IProduct) => {
   return (
@@ -19,7 +20,11 @@ const ProductCard = (product: IProduct) => {
         <div className="text-left font-bold mt-3">Includes</div>
         <ul className="text-left text-sm">
           {product.covered.map((section) => {
-            return <li key={section}>{CoverSection[section]}</li>;
+            return (
+              <li key={section}>
+                {convertCamelCaseToSpaces(CoverSection[section])}
+              </li>
+            );
           })}
         </ul>
       </div>
