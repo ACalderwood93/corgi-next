@@ -34,7 +34,6 @@ const YourDetails = () => {
     resolver: yupResolver(schema),
   });
   const onSubmit = (data: IPersonalDetails) => {
-    console.log(data);
     setCheckout({ ...checkout, personalDetails: data });
   };
 
