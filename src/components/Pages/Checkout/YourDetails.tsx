@@ -19,7 +19,7 @@ const YourDetails = () => {
         .required("Please enter a valid email address"),
       phone: yup
         .string()
-        .required()
+        .required("Please enter your phone number")
         .matches(
           /^(?:(?:\+|00)44|0)(?:\s?\d){9,10}$/,
           "Invalid UK phone number"
