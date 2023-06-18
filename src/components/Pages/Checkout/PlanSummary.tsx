@@ -6,9 +6,10 @@ import { Excess } from "@/lib/Checkout/interfaces";
 import { Dialog } from "@headlessui/react";
 import Link from "next/link";
 import { useState } from "react";
-import { set } from "react-hook-form";
+import { useRouter } from "next/navigation";
 import { useRecoilValue } from "recoil";
 const PlanSummary = () => {
+  const router = useRouter();
   const [modalOpen, setModalOpen] = useState(false);
   const checkout = useRecoilValue(checkoutState);
   return (
@@ -42,7 +43,10 @@ const PlanSummary = () => {
             <Link href="/boiler-cover">Change Plan</Link>
           </div>
         </div>
-        <span>Price: £{checkout.product?.price} / Month</span>
+        <span>
+          Price: <span className="font-bold">£{checkout.product?.price}</span> /
+          Month
+        </span>
         <div className="flex flex-row">
           <div className="flex-grow">
             <span>Callout Fee: {Excess[checkout.excess]}</span>
@@ -55,7 +59,12 @@ const PlanSummary = () => {
           </div>
         </div>
 
-        <CtaButton className="mt-4">Get Cover</CtaButton>
+        <CtaButton
+          className="mt-4"
+          onClick={() => router.push("/checkout/agreement")}
+        >
+          Get Cover
+        </CtaButton>
       </div>
     </>
   );
