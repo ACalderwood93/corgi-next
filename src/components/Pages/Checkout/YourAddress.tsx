@@ -37,7 +37,7 @@ const YourAddress = () => {
   });
   const onSubmit = (data: IAddress) => {
     setCheckout({ ...checkout, address: data });
-    router.push("/boiler-cover");
+    router.push("/checkout/plan-summary");
   };
 
   // Set initial value when the component mounts
