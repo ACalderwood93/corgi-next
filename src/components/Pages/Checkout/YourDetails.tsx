@@ -80,7 +80,7 @@ const YourDetails = () => {
         <span className="text-red-600 text-sm">{errors.phone?.message}</span>
         <input
           className="my-2"
-          type="text"
+          type="number"
           placeholder="Phone Number"
           {...register("phone")}
         />
