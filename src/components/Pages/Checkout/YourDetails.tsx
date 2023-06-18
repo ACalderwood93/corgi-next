@@ -51,7 +51,7 @@ const YourDetails = () => {
   }, [setValue]);
 
   return (
-    <div className="w-64">
+    <div className="w-full md:w-96 px-3 md:px-0">
       <h1>Your Details</h1>
       <form className="flex flex-col w-full " onSubmit={handleSubmit(onSubmit)}>
         <span className="text-red-600 text-sm">
