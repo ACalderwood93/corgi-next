@@ -3,12 +3,14 @@ import { useRecoilState } from "recoil";
 import { checkoutState } from "@/components/Recoil/Checkout/Atoms/Checkout";
 import { ICheckout, IPersonalDetails } from "@/lib/Checkout/interfaces";
 import CtaButton from "@/components/CtaButton";
+import { useRouter } from "next/navigation";
 import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { useEffect } from "react";
 const YourDetails = () => {
   const [checkout, setCheckout] = useRecoilState<ICheckout>(checkoutState);
-
+  const router = useRouter();
   const schema = yup
     .object({
       firstName: yup.string().required("Please enter your first name"),
@@ -29,13 +31,24 @@ const YourDetails = () => {
   const {
     register,
     handleSubmit,
+    setValue,
     formState: { errors },
   } = useForm<IPersonalDetails>({
     resolver: yupResolver(schema),
   });
   const onSubmit = (data: IPersonalDetails) => {
     setCheckout({ ...checkout, personalDetails: data });
+    router.push("/boiler-cover");
   };
+
+  // Set initial value when the component mounts
+  useEffect(() => {
+    setValue("firstName", checkout?.personalDetails?.firstName as string);
+    setValue("lastName", checkout?.personalDetails?.lastName as string);
+    setValue("email", checkout?.personalDetails?.email as string);
+    setValue("phone", checkout?.personalDetails?.phone as string);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [setValue]);
 
   return (
     <div className="w-64">
