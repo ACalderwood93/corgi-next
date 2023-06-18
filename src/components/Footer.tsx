@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="flex justify-center  pt-6">
       <div className="w-screen md:max-w-[1200px] ">
         <div className="flex flew-col flex-wrap p-6 border-b-2">
-          <div className="w-full md:w-1/4 px-6 pt-4">
+          <div className="w-full md:w-1/4 px-0 md:px-6 pt-4">
             <Link href="/">
               <Image
                 src="/logo.svg"
