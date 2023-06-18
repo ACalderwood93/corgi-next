@@ -1,18 +1,23 @@
 "use client";
 
-import { useState } from "react";
 import { CoverSection, IProduct } from "@/lib/Products/Interfaces";
+import { useRouter } from "next/navigation";
 import Card from "../Card";
 import CtaButton from "../CtaButton";
-import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";
-import Link from "next/link";
 import { convertCamelCaseToSpaces } from "@/lib/helpers";
-import { Dialog } from "@headlessui/react";
 import { useRecoilState } from "recoil";
 import { modalStateAtom } from "../Recoil/Atoms/FindAplan";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { checkoutState } from "../Recoil/Checkout/Atoms/Checkout";
+import { ICheckout } from "@/lib/Checkout/interfaces";
 const ProductCard = (product: IProduct) => {
   const [modal, setModal] = useRecoilState(modalStateAtom);
+  const [checkout, setCheckout] = useRecoilState<ICheckout>(checkoutState);
+  const router = useRouter();
+
+  const handleSelect = () => {
+    setCheckout({ ...checkout, product: product });
+    router.push("/checkout/your-details");
+  };
   return (
     <Card className="flex-grow p-6 mx-2 text-center mt-6 w-full md:w-full px-4 md:px-0 lg:w-32 md:mt-4">
       <h1>{product.name}</h1>
@@ -45,10 +50,7 @@ const ProductCard = (product: IProduct) => {
         </ul>
       </div>
       <div className="w-full">
-        <CtaButton
-          onClick={() => setModal({ ...modal, modalOpen: true })}
-          className="p-4 w-[98%] md:w-[70%]"
-        >
+        <CtaButton onClick={handleSelect} className="p-4 w-[98%] md:w-[70%]">
           Select
         </CtaButton>
       </div>

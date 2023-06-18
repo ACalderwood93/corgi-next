@@ -33,14 +33,14 @@ const FindAPlan = () => {
         <div className="fixed inset-0 bg-black/30" aria-hidden="true" />
         <div className="fixed inset-0 flex items-center justify-center  md:w-screen">
           <Dialog.Panel className=" rounded bg-white ">
-            <Card className="p-4 w-screen md:w-[750px] rounded-lg">
+            <Card className="p-4 w-full md:w-[750px] rounded-lg">
               <h2 className="text-xl font-bold">
                 Whats Included -{" "}
                 {convertCamelCaseToSpaces(
                   CoverSection[modal.selectedCoverSection!]
                 )}
               </h2>
-              <ul className="pt-6">
+              <ul className="pt-6 text-xs md:text-sm">
                 {CoverSections.find(
                   (section) => section.name === modal.selectedCoverSection
                 )?.sections.map((section) => (
