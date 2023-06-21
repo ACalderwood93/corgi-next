@@ -10,6 +10,7 @@ import { modalStateAtom } from "./Recoil/Atoms/FindAplan";
 import { CoverSection } from "@/lib/Products/Interfaces";
 import { CoverSections } from "@/lib/CoverSections/constants";
 import { convertCamelCaseToSpaces } from "@/lib/helpers";
+import ExcessToggle from "./ExcessToggle";
 const FindAPlan = () => {
   const [modal, setModal] = useRecoilState<ImodalState>(modalStateAtom);
   return (
@@ -17,6 +18,10 @@ const FindAPlan = () => {
       <BackgroundImageContainer className="py-12">
         <div className="w-screen md:max-w-[1200px] justify-center flex flex-col text-center p-6 md:p-0">
           <h1>Find a plan that suits you</h1>
+          <div className="inline-flex flex-row flex-wrap">
+            <span className="px-4 text-xl font-bold">£60 Excess</span>{" "}
+            <ExcessToggle />
+          </div>
           <div className="flex flex-row flex-wrap">
             {Products.map((product) => {
               if (!product.display) return;

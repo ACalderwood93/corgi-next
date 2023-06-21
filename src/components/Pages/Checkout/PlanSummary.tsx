@@ -33,7 +33,7 @@ const PlanSummary = () => {
           </Dialog.Panel>
         </div>
       </Dialog>
-      <div className="flex flex-col w-full md:w-[500px] px-4">
+      <div className="flex flex-col px-4">
         <h1>Your plan overview</h1>
         <div className="flex flex-row">
           <div className="flex-grow">

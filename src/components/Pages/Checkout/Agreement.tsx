@@ -3,7 +3,7 @@ import CtaButton from "@/components/CtaButton";
 
 const Agreement = () => {
   return (
-    <div className="flex flex-col w-full md:w-[500px] px-4">
+    <div className="flex flex-col px-4">
       <h1>Checking your cover</h1>
       <Checkbox
         id="ownerOccupier"

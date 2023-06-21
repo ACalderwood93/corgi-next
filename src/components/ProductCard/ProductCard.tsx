@@ -1,5 +1,6 @@
 "use client";
 
+import useProduct from "@/app/hooks/useProduct";
 import { CoverSection, IProduct } from "@/lib/Products/Interfaces";
 import { useRouter } from "next/navigation";
 import Card from "../Card";
@@ -8,11 +9,12 @@ import { convertCamelCaseToSpaces } from "@/lib/helpers";
 import { useRecoilState } from "recoil";
 import { modalStateAtom } from "../Recoil/Atoms/FindAplan";
 import { checkoutState } from "../Recoil/Checkout/Atoms/Checkout";
-import { ICheckout } from "@/lib/Checkout/interfaces";
+import { Excess, ICheckout } from "@/lib/Checkout/interfaces";
 const ProductCard = (product: IProduct) => {
   const [modal, setModal] = useRecoilState(modalStateAtom);
   const [checkout, setCheckout] = useRecoilState<ICheckout>(checkoutState);
   const router = useRouter();
+  const { currentPrice } = useProduct();
 
   const handleSelect = () => {
     setCheckout({ ...checkout, product: product });
@@ -25,7 +27,10 @@ const ProductCard = (product: IProduct) => {
         <div>from</div>
         <h2>
           <span className="font-bold text-5xl text-primary">
-            £{product.price}
+            £
+            {checkout.excess == Excess.Zero
+              ? product.priceWithoutExcess
+              : product.price}
           </span>
           <div>/ month</div>
         </h2>

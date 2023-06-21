@@ -37,7 +37,7 @@ const YourAddress = () => {
   });
   const onSubmit = (data: IAddress) => {
     setCheckout({ ...checkout, address: data });
-    router.push("/checkout/plan-summary");
+    router.push("/checkout/agreement");
   };
 
   // Set initial value when the component mounts
@@ -50,7 +50,7 @@ const YourAddress = () => {
   }, [setValue]);
 
   return (
-    <div className="w-full md:w-96 px-3 md:px-0">
+    <div className="">
       <h1>Your Address</h1>
       <form className="flex flex-col w-full " onSubmit={handleSubmit(onSubmit)}>
         <span className="text-red-600 text-sm">{errors.address1?.message}</span>
@@ -81,7 +81,9 @@ const YourAddress = () => {
           placeholder="Postcode"
           {...register("postCode")}
         />
-        <CtaButton type="submit">Next</CtaButton>
+        <CtaButton className="py-2" type="submit">
+          Next
+        </CtaButton>
       </form>
     </div>
   );
